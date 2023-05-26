@@ -5,7 +5,7 @@
  *
  * Return: void
  */
-void print_more_numbers(void)
+void more_numbers(void)
 {
 
 	for (int j = 0; j < 10; j++)
