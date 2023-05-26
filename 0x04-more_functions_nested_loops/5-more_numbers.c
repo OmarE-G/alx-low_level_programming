@@ -8,13 +8,13 @@
 void more_numbers(void)
 {
 
-	for (int j = 0; j < 10; j++)
+	for (int i = 0; i < 10; i++)
 	{
-		for (int i = 0; i <= 14; i++)
+		for (int j = 0; j <= 14; j++)
 		{
-			printf("%d", i);
+			printf("%d", j);
 		}
-		if (j < 10)
+		if (i < 9)
 			printf("\n");
 	}
 
