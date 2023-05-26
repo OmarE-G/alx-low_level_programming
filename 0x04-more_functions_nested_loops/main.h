@@ -1,3 +1,1 @@
-
-void fizz_buzz(void);
-int main(void);
+void print_triangle(int size);
