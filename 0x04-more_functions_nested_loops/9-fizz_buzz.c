@@ -8,6 +8,7 @@
  * Return: void
  */
 
+
 void fizz_buzz(void)
 {
 	int i;
