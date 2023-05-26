@@ -31,5 +31,5 @@ void print_triangle(int size)
 			printf("\n");
 		}
 	}
-	printf("\n");
+
 }
