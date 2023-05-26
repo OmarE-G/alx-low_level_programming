@@ -18,7 +18,6 @@ void more_numbers(void)
 		{
 			printf("%d", j);
 		}
-		if (i < 9)
 			printf("\n");
 	}
 
