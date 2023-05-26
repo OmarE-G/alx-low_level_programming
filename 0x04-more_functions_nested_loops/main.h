@@ -1,1 +1,1 @@
-void print_line(void);
+void print_line(int n);
