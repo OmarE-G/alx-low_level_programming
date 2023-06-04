@@ -10,7 +10,7 @@ int main(void)
 	int i = 0;
 	long long int j = 1, k = 2;
 
-	printf("%ld, %ld, ", j, k);
+	printf("%lld, %lld, ", j, k);
 	while (i < 98)
 	{
 		k += j;
