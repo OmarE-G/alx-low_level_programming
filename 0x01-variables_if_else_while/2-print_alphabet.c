@@ -10,16 +10,22 @@
  * main - Entry point
  * Description: Write a program that prints the alphabet in lowercase,
  * followed by a new line.
- * You can only use the putchar function 
+ * You can only use the putchar function
  * (every other function (printf, puts, etc…) is forbidden)
  * All your code should be in the main function
  * You can only use putchar twice in your code
-
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	/*code starts here*/
-	int n;
+	int i;
+
+	for (i = 97; i < 123; i++)
+	{
+		putchar(i);
+	}
+	putchar('\n');
 	return (0);
 }
+
