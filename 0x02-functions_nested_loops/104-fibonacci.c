@@ -1,18 +1,24 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
-  * print_alphabet - Make the alphabet
+  * main - Prints first 100 Fibonacci numbers.
   *
-  * Return: void
+  * Return: Nothing.....
   */
-void print_alphabet(void)
+int main(void)
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
+	int i = 0;
+	long j = 1, k = 2;
+	printf("%ld, %ld, \n", j, k);
+	while (i < 100)
 	{
-		_putchar(c);
-	}
+		k += j;
 
-	_putchar('\n');
+		printf("%ld, \n", k);
+
+		j = k - j;
+
+		++i;
+	}
+	return (0);
 }
