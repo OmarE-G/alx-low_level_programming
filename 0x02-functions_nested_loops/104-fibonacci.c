@@ -11,7 +11,7 @@ int main(void)
 	long j = 1, k = 2;
 
 	printf("%ld, %ld, ", j, k);
-	while (i < 100)
+	while (i < 98)
 	{
 		k += j;
 
