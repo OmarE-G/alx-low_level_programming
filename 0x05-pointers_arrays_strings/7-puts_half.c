@@ -27,7 +27,9 @@ void puts_half(char *str)
 {
 	int n = _strlen(str), skip;
 
-	n--;
+	if (n & 1)
+		n--;
+
 	n /= 2;
 
 	skip = _strlen(str) - n;
