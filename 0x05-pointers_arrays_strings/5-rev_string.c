@@ -7,13 +7,16 @@
  */
 void rev_string(char *s)
 {
+	if (*s == '\0')
+		return;
+
 	char *e  = s;
 
 	while (*e != '\0')
 		e++;
 	e--;
 
-	while (s != e)
+	while (s <= e)
 	{
 		char temp = *s;
 
