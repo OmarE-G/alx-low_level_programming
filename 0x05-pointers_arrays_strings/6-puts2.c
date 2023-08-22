@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <stdbool.h>
 
 /**
  * puts2 - prints alternatively
