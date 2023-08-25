@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 /**
- * _strncoy - concat strings
+ * _strncpy - concat strings
  *
  * @dest : d
  * @src : s
