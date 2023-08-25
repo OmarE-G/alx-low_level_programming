@@ -7,13 +7,13 @@
  *
  *Return: string in uppercase
  */
-char *string_toupper(char *s)
+char *string_toupper(char *x)
 {
-	char *st = s;
+	char *st = x;
 
 	while (*st)
 		*st == (*st >= 'a' && *st <= 'z') ? *st - 'a' + 'A' : *st, st++;
 
-	return (s);
+	return (x);
 }
 
