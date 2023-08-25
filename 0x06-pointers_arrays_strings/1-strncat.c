@@ -1,21 +1,23 @@
 #include<stdio.h>
 
 /**
- * _strcat - concat strings
+ * _strncat - concat strings
  *
  * @dest : d
  * @src : s
+ * @n : sz
  * Return: char*
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *st = dest;
+	int c = 0;
 
 	while (*st != '\0')
 		st++;
 
-	while (*src != '\0')
-		*st = *src, st++, src++;
+	while (c < n)
+		*st = *src, st++, src++, c++;
 
 	*st = '\0';
 
