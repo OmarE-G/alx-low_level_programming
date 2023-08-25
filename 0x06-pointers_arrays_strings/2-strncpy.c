@@ -16,6 +16,8 @@ char *_strncpy(char *dest, char *src, int n)
 	while (c < n)
 		*st = (end ? '\0' : *src), st++, src++, c++, end |= (*src == '\0');
 
+	if (!end)
+		*st = '\0';
 
 	return (dest);
 }
