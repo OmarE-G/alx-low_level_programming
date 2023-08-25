@@ -3,9 +3,9 @@
 /**
  * string_toupper - uppercase
  *
- * @s : string
+ * @x : string
  *
- *Return: string in uppercase
+ * Return: string in uppercase
  */
 char *string_toupper(char *x)
 {
