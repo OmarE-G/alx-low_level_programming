@@ -1,6 +1,6 @@
-		#include "main.h"
+#include "main.h"
 #include<string.h>
-
+#include<stdio.h>
 /**
  * print_chessboard - prints 8x8 array
  *
