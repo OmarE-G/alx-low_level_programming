@@ -3,7 +3,7 @@
 
 /**
  * _strstr - sets memory
- *		
+ *	
  * @haystack: st
  * @needle: val
  * Return: char*
