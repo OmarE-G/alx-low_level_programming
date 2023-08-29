@@ -8,9 +8,9 @@
 int main(void)
 {
 	int i = 0;
-	long long int j = 1, k = 2;
+	unsigned long int j = 1, k = 2;
 
-	printf("%lld, %lld, ", j, k);
+	printf("%uld, %ld, ", j, k);
 	while (i < 98)
 	{
 		k += j;
