@@ -1,12 +1,12 @@
 #include<stdio.h>
 
 /**
- * @brief 
+ * factorial - print factorial of a number 
  * 
  * 
  * @param n 
  */
-void p(int n)
+void factorial(int n)
 {
 
 }
