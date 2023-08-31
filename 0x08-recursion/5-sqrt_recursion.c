@@ -1,12 +1,14 @@
 #include<stdio.h>
 
 /**
- * @brief 
- * 
- * 
- * @param n 
+ * _sqrt_recursion - Write a function that returns the natural square root of a number.
+ *
+ *
+ * @n : num
+ *
+ * Return: sqrt of n
  */
-void p(int n)
+int _sqrt_recursion(int n)
 {
-
+	return (sqrt(n));
 }
