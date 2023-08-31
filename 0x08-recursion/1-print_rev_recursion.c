@@ -1,12 +1,17 @@
 #include<stdio.h>
 
 /**
- * @brief 
- * 
- * 
- * @param n 
+ * _print_rev_recursion - print string in reverse
+ *
+ *
+ * @s: string
  */
-void p(int n)
+void _print_rev_recursion(char *s);
 {
-
+	if (*s == '\0')
+	{
+		return;
+	}
+	_print_rev_recursion(s + 1);
+	putchar(*s);
 }
