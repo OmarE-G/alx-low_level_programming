@@ -1,12 +1,16 @@
 #include<stdio.h>
 
 /**
- * @brief 
- * 
- * 
- * @param n 
+ * _strlen_recursion - print string length
+ *
+ *@s: string
+ * Return: length of string
  */
-void p(int n)
+int _strlen_recursion(char *s)
 {
-
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	return (1 + _print_rev_recursion(s + 1));
 }
