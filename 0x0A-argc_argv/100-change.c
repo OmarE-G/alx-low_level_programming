@@ -34,6 +34,7 @@ int main(int argc, char **argv)
 {
 	int i = 0, ans = 0, x;
 	int arr[] = {25, 10, 5, 2, 1};
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -44,9 +45,9 @@ int main(int argc, char **argv)
 
 	while (i < 5)
 	{
-		if(x >= arr[i] && x > 0)
+		if (x >= arr[i] && x > 0)
 			ans += x / arr[i], x -= arr[i] * (x / arr[i]);
-		i ++;
+		i++;
 	}
 
 	printf("%d\n", ans);
