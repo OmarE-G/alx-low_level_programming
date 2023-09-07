@@ -32,19 +32,20 @@ int atoi(char *a)
 
 int main(int argc, char **argv)
 {
-	int a = 0, b = 0;
+	int sum = 0, a;
 
-	if (argc > 2)
-		b = atoi(argv[2]);
-
-	a = atoi(argv[1]);
-
-	if (a < 0 || b < 0)
+	while(argc > 1)
 	{
-		printf("Error\n");
-		return (1);
+		argc--;
+		a = atoi(argv[argc]);
+		if (a < 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		sum += a;
 	}
-	printf("%d\n", a + b);
+	printf("%d\n", sum);
 
 	return (0);
 }
