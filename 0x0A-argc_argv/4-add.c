@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 {
 	int sum = 0, a;
 
-	while(argc > 1)
+	while (argc > 1)
 	{
 		argc--;
 		a = atoi(argv[argc]);
