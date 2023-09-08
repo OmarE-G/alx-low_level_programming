@@ -17,26 +17,36 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i = 0;
-	char *ptr = NULL;
+	char *str;
+	int count = 0, a = 0, b = 0, c = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
-	while (i < ac)
+	while (a < ac)
 	{
-		if (ptr == NULL)
-			ptr = malloc(strlen(av[i]));
-		else
-			ptr = realloc(ptr, strlen(ptr) + strlen(av[i]));
-		if (ptr == NULL)
+		b = 0;
+		while (av[a][b] != '\0')
 		{
-			return (NULL);
+			count++;
+			b++;
 		}
-		strcat(ptr, av[i]);
-		strcat(ptr, "\n");
-		i++;
+		a++;
 	}
-	return (ptr);
-
+	count = count + ac + 1;
+	str = malloc(sizeof(char) * count);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (a = 0; a < ac; a++)
+	{
+		for (b = 0; av[a][b] != '\0'; b++)
+		{
+			str[c] = av[a][b];
+			c++;
+		}
+		str[c] = '\n';
+		c++;
+	}
+	return (str);
 }
