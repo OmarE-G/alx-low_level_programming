@@ -28,6 +28,8 @@ char *argstostr(int ac, char **av)
 		if (ptr == NULL)
 			return (NULL);
 		strcat(ptr, av[i]);
+
+		i++;
 	}
 	return (ptr);
 
