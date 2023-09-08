@@ -4,6 +4,7 @@
 #define __STDC_WANT_LIB_EXT2__ 1
 #else
 #define _POSIX_C_SOURCE 200809L
+#endif
 #include <string.h>
 /**
 * _strdup - makes an array
