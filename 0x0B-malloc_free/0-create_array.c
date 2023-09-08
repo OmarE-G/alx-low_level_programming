@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<stdlib.h>
 
 /**
 * create_array - makes an array
@@ -15,8 +15,8 @@ char *create_array(unsigned int size, char c)
 
 	if (!size || ptr == NULL)
 		return (NULL);
-	while (sz--)
-		ptr[sz] = c;
+	while (size--)
+		ptr[size] = c;
 	return (ptr);
 
 }
