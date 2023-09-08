@@ -25,7 +25,10 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 	{
-		ptr = realloc(ptr, ptr == NULL ? 0 : strlen(ptr) + strlen(av[i]) + 2);
+		if (ptr == NULL)
+			ptr = malloc(strlen(av[i]) + 2);
+		else
+			ptr = realloc(ptr, strlen(ptr) + strlen(av[i]) + 2);
 		if (ptr == NULL)
 		{
 			return (NULL);
