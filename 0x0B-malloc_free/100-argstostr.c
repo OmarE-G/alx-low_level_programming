@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 	{
-		ptr = realloc(ptr, ptr == NULL ? 0 : strlen(ptr) + strlen(av[i]) + 2);
+		ptr = realloc(ptr, ptr == NULL ? 0 : strlen(ptr) + strlen(av[i]) + 1);
 		if (ptr == NULL)
 			return (NULL);
 		strcat(ptr, av[i]);
