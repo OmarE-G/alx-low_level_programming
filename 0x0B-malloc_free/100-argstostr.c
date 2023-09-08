@@ -13,6 +13,20 @@
  *Return:ptr
 */
 
+void _stringcat(char *dest, char *src)
+{
+	int i = 0, j = 0;
+
+	while (*(dest + i))
+		i++;
+	while (*(src + j))
+	{
+		*(dest + i) = *(src + j);
+		i++;
+		j++;
+	}
+	*(dest + i) = '\0';
+}
 
 char *argstostr(int ac, char **av)
 {
@@ -24,11 +38,14 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 	{
-		ptr = realloc(ptr, ptr == NULL ? 0 : strlen(ptr) + strlen(av[i]));
+		free(ptr);
+		ptr = realloc(ptr, ptr == NULL ? 0 : strlen(ptr) + strlen(av[i]) + 2);
 		if (ptr == NULL)
+		{
 			return (NULL);
-		strcat(ptr, av[i]);
-		strcat(ptr, "\n");
+		}
+		_stringcat(ptr, av[i]);
+		_stringcat(ptr, "\n");
 		i++;
 	}
 	return (ptr);
