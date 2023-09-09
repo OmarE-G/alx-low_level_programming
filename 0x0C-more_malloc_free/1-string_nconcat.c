@@ -23,10 +23,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	end = min(n, strlen(s2));
-	end = end + strlen(s1);
+	s1 = realloc(s1, end + strlen(s1) + 1);
+
+	end += strlen(s1);
 	i = strlen(s1);
 
-	s1 = realloc(s1, end + strlen(s1) + 1);
 	if (s1 == NULL)
 		return (NULL);
 
