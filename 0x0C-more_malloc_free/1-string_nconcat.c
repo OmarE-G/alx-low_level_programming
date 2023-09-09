@@ -16,24 +16,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int end;
 	int i = 0, j = 0;
-
+	char *ptr;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
 	end = min(n, strlen(s2));
-	s1 = realloc(s1, end + strlen(s1) + 1);
+	ptr = malloc(end + strlen(s1) + 1);
 	if (s1 == NULL)
 		return (NULL);
 
 	end += strlen(s1);
-	i = strlen(s1);
 
-	
-
+	while (i < (int)strlen(s1))
+		ptr[i] = s1[i], i++;
 	while (i <= end)
-		s1[i++] = s2[j++];
+		ptr[i++] = s2[j++];
 
-	return (s1);
+	return (ptr);
 }
