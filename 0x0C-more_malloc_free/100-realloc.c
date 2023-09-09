@@ -4,7 +4,7 @@
 #define min(a, b) (((a) < (b)) ? (a) : (b))
 /**
  *_realloc - Write a function that
- reallocates a memory block using malloc and free
+ *reallocates a memory block using malloc and *free
  *@ptr: void
  *@old_size: unsigned int
  *@new_size: unsigned int
