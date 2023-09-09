@@ -24,12 +24,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	end = min(n, strlen(s2));
 	s1 = realloc(s1, end + strlen(s1) + 1);
+	if (s1 == NULL)
+		return (NULL);
 
 	end += strlen(s1);
 	i = strlen(s1);
 
-	if (s1 == NULL)
-		return (NULL);
+	
 
 	while (i <= end)
 		s1[i++] = s2[j++];
