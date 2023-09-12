@@ -1,4 +1,4 @@
-#ifndef ABS(x)
-#define ABS(x) ((x) < 0 ? -(x) : (x))
+#ifndef PI
+#define PI 3.14159265359
 
 #endif
