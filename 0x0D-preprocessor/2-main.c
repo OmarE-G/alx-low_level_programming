@@ -1,13 +1,4 @@
-#include <stdio.h>
-#define FILE __FILE__
+#ifndef ABS(x)
+#define ABS(x) ((x) < 0 ? -(x) : (x))
 
-/**
- * main - function
- *
- * Return: int
- */
-int main(void)
-{
-	printf("%s\n", FILE);
-	return (0);
-}
+#endif
