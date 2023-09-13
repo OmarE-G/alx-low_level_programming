@@ -15,10 +15,10 @@
 int is_pal(char *s, int i)
 {
 
-	if (*s == strlen(s) / 2)
+	if (i == strlen(s) / 2)
 		return (1);
 	if (*(s + i) == *(s + strlen(s) - i - 1))
-		return (is_palindrome(s, i + 1));
+		return (is_pal(s, i + 1));
 	else
 		return (0);
 }
