@@ -1,16 +1,7 @@
 #include<stdio.h>
 #include<string.h>
-/**
- * is_palindrome - checks if a string is a palindrome
- *
- * @s: string to check
- *
- * Return: 1 if palindrome, 0 if not
- */
-int is_palindrome(char *s)
-{
-	return (is_pal(s, 0));
-}
+
+
 
 /**
  * is_pal - checks if a string is a palindrome
@@ -31,3 +22,16 @@ int is_pal(char *s, int i)
 	else
 		return (0);
 }
+
+/**
+ * is_palindrome - checks if a string is a palindrome
+ *
+ * @s: string to check
+ *
+ * Return: 1 if palindrome, 0 if not
+ */
+int is_palindrome(char *s)
+{
+	return (is_pal(s, 0));
+}
+
