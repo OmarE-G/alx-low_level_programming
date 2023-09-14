@@ -1,7 +1,7 @@
 #include "function_pointers.h"
 
 /**
- * int_index - indexes aray i think
+ * int_index - indexes
  * @array: array to go through
  * @size: size of array
  * @cmp: function to do something with size
