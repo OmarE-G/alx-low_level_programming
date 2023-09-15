@@ -8,11 +8,11 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	unsigned int i = 0;
+	unsigned int i = 0, n = strlen(format);
 	char *s;
 
 	va_start(ap, format);
-	while (format && format[i])
+	while (i < n)
 	{
 		switch (format[i])
 		{
@@ -32,7 +32,8 @@ void print_all(const char * const format, ...)
 				printf("%s", s);
 				break;
 			default:
-				break;
+				i++;
+				continue;
 		}
 		i++;
 	}
