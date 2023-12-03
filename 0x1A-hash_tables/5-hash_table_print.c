@@ -7,19 +7,19 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int pos;
+	unsigned long int pos = 0;
 	int first = 1;
-	hash_node_t *curr;
+	hash_node_t *curr = NULL;
 
-	if (!ht)
+	if (!ht || ht->size == 0)
 		return;
 
 	pos = 0;
 	printf("{");
-	while (pos++ < ht->size)
+	while (pos < ht->size)
 	{
 		curr = ht->array[pos];
-		while (curr)
+		while (curr != NULL)
 		{
 			if (curr->key != NULL)
 			{
@@ -33,6 +33,7 @@ void hash_table_print(const hash_table_t *ht)
 			}
 			curr = curr->next;
 		}
+		pos++;
 	}
 	printf("}\n");
 
