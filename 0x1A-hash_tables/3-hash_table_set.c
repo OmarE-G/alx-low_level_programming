@@ -45,7 +45,7 @@ hash_node_t *make_hash_node(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int pos = key_index((const unsigned char *) key, ht->size);
+	unsigned long int pos = key_index((const unsigned char *) key, ht->size);
 	hash_node_t *new_node, *curr = ht->array[pos];
 	char *newval;
 
@@ -53,7 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	    key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
 
-	while (curr)
+	while (curr != NULL)
 	{
 		if (strcmp(curr->key, key) == 0)
 		{
