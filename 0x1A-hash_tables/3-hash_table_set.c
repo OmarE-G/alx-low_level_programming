@@ -18,14 +18,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node, *curr = ht->array[pos];
 
 
-	strcpy(new_node->key, key), strcpy(new_node->value, value);
 
 	while (curr)
 	{
 		if (strcmp(curr->key, key) == 0)
 		{
 			strcpy(curr->value, value);
-			break;
+			return (1);
 		}
 		curr = curr->next;
 	}
@@ -33,6 +32,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!new_node)
 		return (0);
+
+	strcpy(new_node->key, key), strcpy(new_node->value, value);
 
 	new_node->next = ht->array[pos];
 	ht->array[pos] = new_node;
