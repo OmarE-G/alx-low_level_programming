@@ -4,21 +4,24 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - sets key to value
- *
- * @ht: table
- * @key: key
- * @value: value
- * Return: int
+ * strdup - update
+ * @s: strinng
+ * Return: char*
  */
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include "hash_tables.h"
+char *strdup(const char *s)
+{
+	size_t len = strlen(s) + 1;
+	void *new = malloc(len);
+
+	if (new == NULL)
+		return (NULL);
+
+	return ((char *) memcpy(new, s, len));
+}
 
 /**
- * hash_table_set - sets key to value
+ * hash_table_set -sets key to value
  *
  * @ht: table
  * @key: key
