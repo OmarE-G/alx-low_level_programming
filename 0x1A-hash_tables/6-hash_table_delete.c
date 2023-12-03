@@ -10,7 +10,7 @@ void hash_table_delete(hash_table_t *ht)
 	unsigned long int pos;
 	hash_node_t *curr, *temp;
 
-	if (!ht)
+	if (!ht || !ht->array)
 		return;
 
 	pos = 0;
