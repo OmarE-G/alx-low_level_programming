@@ -33,6 +33,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int pos = key_index((const unsigned char *) key, ht->size);
 	hash_node_t *new_node, *curr = ht->array[pos];
 
+	if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
+		return (0);
+
 	while (curr)
 	{
 		if (strcmp(curr->key, key) == 0)
