@@ -45,37 +45,32 @@ hash_node_t *make_hash_node(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int pos = key_index((const unsigned char *) key, ht->size);
-	hash_node_t *new_node, *curr = ht->array[pos];
-	char *newval;
+	unsigned long int index;
+	hash_node_t *hash_node, *tmp;
+	char *new_value;
 
 	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 	    key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
-
-	while (curr != NULL)
+	index = key_index((const unsigned char *)key, ht->size);
+	tmp = ht->array[index];
+	while (tmp != NULL)
 	{
-		if (strcmp(curr->key, key) == 0)
+		if (strcmp(tmp->key, key) == 0)
 		{
-			newval = strdup(value);
-
-			if (newval == NULL)
+			new_value = strdup(value);
+			if (new_value == NULL)
 				return (0);
-
-			free(curr->value);
-			curr->value = newval;
+			free(tmp->value);
+			tmp->value = new_value;
 			return (1);
 		}
-		curr = curr->next;
+		tmp = tmp->next;
 	}
-
-	new_node = make_hash_node(key, value);
-
-	if (new_node == NULL)
-		return  (0);
-
-	new_node->next = ht->array[pos];
-	ht->array[pos] = new_node;
-
+	hash_node = make_hash_node(key, value);
+	if (hash_node == NULL)
+		return (0);
+	hash_node->next = ht->array[index];
+	ht->array[index] = hash_node;
 	return (1);
 }
