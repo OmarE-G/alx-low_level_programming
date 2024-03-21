@@ -12,8 +12,7 @@ all: ${OBJ}
 
 .PHONY: clean oclean fclean re
 
-re:
-	oclean all
+re: oclean all
 
 clean:
 	${RM} *~ ${NAME} 
@@ -21,6 +20,5 @@ clean:
 oclean:
 	${RM} ${OBJ}
 
-fclean:
-	oclean clean
+fclean: oclean clean
 
