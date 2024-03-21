@@ -10,14 +10,14 @@ all: ${OBJ}
 %.o: %.c
 	${CC} -c -o $@ $<
 
-re: ${SRC}
+re:
 	oclean
 	all
 
 clean:
 	${RM} *~ ${NAME} 
 
-oclean:
+oclean: ${OBJ}
 	${RM} ${OBJ}
 
 fclean:
