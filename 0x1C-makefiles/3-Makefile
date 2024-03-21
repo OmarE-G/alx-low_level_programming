@@ -11,8 +11,7 @@ all: ${OBJ}
 	${CC} -c -o $@ $<
 
 re:
-	oclean
-	all
+	oclean all
 
 clean:
 	${RM} *~ ${NAME} 
@@ -21,6 +20,5 @@ oclean: ${OBJ}
 	${RM} ${OBJ}
 
 fclean:
-	oclean
-	clean
+	oclean clean
 
