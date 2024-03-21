@@ -10,13 +10,14 @@ all: ${OBJ}
 %.o: %.c
 	${CC} -c -o $@ $<
 
+.PHONY: clean oclean fclean re
 re:
 	oclean all
 
 clean:
 	${RM} *~ ${NAME} 
 
-oclean: ${OBJ}
+oclean:
 	${RM} ${OBJ}
 
 fclean:
